@@ -11,11 +11,25 @@ class Event < ApplicationRecord
      starts_at != nil && starts_at > DateTime.now ? true : false
   end
 
+  def add_artists(artists)
+    artists.each do |artist|
+      self.artists << Artist.create(name: artist)
+    end
+  end
+
   def generate_tickets(amount, price)
     amount.times do
       ticket = Ticket.create(price: price)
       ticket.event = self
       ticket.save
     end
+  end
+
+  def print_tickets
+    to_print = []
+    self.tickets.each do |ticket|
+      to_print << {id: ticket.id, code: ticket.code, event_name: ticket.event.name, artists: ticket.event.artists.map(&:name).to_sentence}
+    end
+    to_print
   end
 end

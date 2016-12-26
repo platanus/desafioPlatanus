@@ -1,0 +1,21 @@
+<h1>Print#index</h1>
+
+<table>
+	<thead>
+		<tr>
+			<th>Id</th>
+      <th>C&oacute;digo</th>
+      <th>Evento</th>
+      <th>Artistas</th>
+		</tr>
+	</thead>
+	<tbody>
+    <% @event.tickets.each do |ticket| %>
+    <tr>
+			<td><%= ticket.id %></td>
+      <td><%= ticket.code %></td>
+      <td><%= @event.name %></td>
+      <td><%= @event.artists.map(&:name).to_sentence %></td>
+		</tr>
+    <% end  %>
+	</tbody>
