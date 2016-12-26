@@ -1,5 +1,5 @@
 class Ticket < ApplicationRecord
-  has_and_belongs_to_many :events
+  belongs_to :event
   validates_uniqueness_of :code
 
   before_save do
