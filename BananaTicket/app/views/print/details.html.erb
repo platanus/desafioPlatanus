@@ -7,6 +7,7 @@
       <th>C&oacute;digo</th>
       <th>Evento</th>
       <th>Artistas</th>
+      <th>QR<th>
 		</tr>
 	</thead>
 	<tbody>
@@ -16,6 +17,8 @@
       <td><%= ticket.code %></td>
       <td><%= @event.name %></td>
       <td><%= @event.artists.map(&:name).to_sentence %></td>
+      <td><%qrcode = RQRCode::QRCode.new(ticket.code, :size => 4, :level => :h)%> <span class="qr"><%= raw qrcode.as_html %></span><td>
+
 		</tr>
     <% end  %>
 	</tbody>
