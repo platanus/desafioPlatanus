@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  code: 
-  price: 
+  code: "b65da4334b5f3c50e964e37322d9c994"
+  price: 330.0
+  event_id: 1
 
 two:
-  code: 
-  price: 
+  code: "c382396763af457dd992d08b5cf7966c"
+  price: 250.0
+  event_id: 1

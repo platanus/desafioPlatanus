@@ -1,9 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: 
-  started_at: 
+  id: 1
+  name: "Festival de Viña del Mar"
+  starts_at: "%{DateTime.now + 20.days}"
 
 two:
-  name: 
-  started_at: 
+  id: 2
+  name: "Festival 2"
+  starts_at: "%{DateTime.now + 20.days}"

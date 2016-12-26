@@ -1,7 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: 
-
+  id: 1
+  name: "Jhon"
 two:
-  name: 
+  id: 2
+  name: "Red Hot"
+three:
+  id: 3
+  name: "Nirvana"

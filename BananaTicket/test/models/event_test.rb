@@ -16,7 +16,7 @@ class EventTest < ActiveSupport::TestCase
     event = Event.new
     event.name = 'Festival'
     event.starts_at = DateTime.now - 10.days
-    assert_not event.save
+    assert event.save
   end
 
   test "when is Ok" do
