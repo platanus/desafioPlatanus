@@ -6,6 +6,13 @@ class Event < ApplicationRecord
   validate :validate_starts_at
 
   def validate_starts_at
-     starts_at > DateTime.now ? true : false
+     starts_at != nil && starts_at > DateTime.now ? true : false
+  end
+
+  def generate_tickets(amount, price)
+    amount.times do
+      ticket = Ticket.create(price: price)
+      self.tickets << ticket
+    end
   end
 end
