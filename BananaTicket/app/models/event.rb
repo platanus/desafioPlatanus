@@ -24,12 +24,4 @@ class Event < ApplicationRecord
       ticket.save
     end
   end
-
-  def print_tickets
-    to_print = []
-    self.tickets.each do |ticket|
-      to_print << {id: ticket.id, code: ticket.code, event_name: ticket.event.name, artists: ticket.event.artists.map(&:name).to_sentence}
-    end
-    to_print
-  end
 end
